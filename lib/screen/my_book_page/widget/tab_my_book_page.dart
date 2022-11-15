@@ -1,27 +1,13 @@
-import 'package:bookshare/app/constant/constant_barrel.dart';
+import 'package:bookshare/app/constant/app_colors.dart';
 import 'package:bookshare/screen/common_widget/item_book_detail.dart';
 import 'package:flutter/material.dart';
 
-class TabBookDetail extends StatefulWidget {
-  const TabBookDetail({Key? key}) : super(key: key);
+class TabMyBookPage extends StatelessWidget {
+  const TabMyBookPage({Key? key}) : super(key: key);
 
-  @override
-  State<TabBookDetail> createState() => _TabBookDetailState();
-}
-
-class _TabBookDetailState extends State<TabBookDetail> {
   @override
   Widget build(BuildContext context) {
-    final List<String> _tabs = <String>[
-      'Lập trình Ứng dụng mạng',
-      'Trí tuệ nhân tạo',
-      'Mô hình hoá - Mô phỏng',
-      'Lập trình Hệ thống mạng',
-      'Lập trình C++',
-      'Ngoại ngữ',
-      'An ninh mạng',
-      'Logic mờ - Điều khiển mờ'
-    ];
+    final List<String> _tabs = <String>['Lent', 'Not Lend'];
     return DefaultTabController(
       length: _tabs.length,
       child: Scaffold(
@@ -75,7 +61,7 @@ class _TabBookDetailState extends State<TabBookDetail> {
                                   ],
                                 );
                               },
-                              childCount: 6,
+                              childCount: 7,
                             ),
                           ),
                         ),

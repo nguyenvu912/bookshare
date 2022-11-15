@@ -1,4 +1,5 @@
 import 'package:bookshare/screen/my_book_page/widget/header_my_book.dart';
+import 'package:bookshare/screen/my_book_page/widget/tab_my_book_page.dart';
 import 'package:flutter/material.dart';
 
 class MyBookPage extends StatefulWidget {
@@ -12,10 +13,11 @@ class _MyBookPageState extends State<MyBookPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: const [
-        HeaderMyBook(),
-      ],
+        // appBar: AppBar(actions: const [
+        //   HeaderMyBook(),
+        // ]),
+        body: Container(
+      child: const TabMyBookPage(),
     ));
   }
 }

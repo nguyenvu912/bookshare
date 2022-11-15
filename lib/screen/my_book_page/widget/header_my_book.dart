@@ -1,3 +1,4 @@
+import 'package:bookshare/app/constant/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class HeaderMyBook extends StatelessWidget {
@@ -6,8 +7,11 @@ class HeaderMyBook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 48),
-      child: const Text("Heelo"),
+      margin: const EdgeInsets.only(right: 148),
+      child: Text(
+        "My Book",
+        style: AppTextStyle.white(24, weight: FontWeight.w400),
+      ),
     );
   }
 }

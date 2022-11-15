@@ -1,3 +1,4 @@
+import 'package:bookshare/screen/question_answer_page/widget/header_question_answer.dart';
 import 'package:flutter/material.dart';
 
 class QuestionAnswerPage extends StatefulWidget {
@@ -10,6 +11,11 @@ class QuestionAnswerPage extends StatefulWidget {
 class _QuestionAnswerPageState extends State<QuestionAnswerPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text("djhdajsdj"));
+    return Scaffold(
+      appBar: AppBar(actions: const [HeaderQuestionPage()]),
+      body: Column(
+        children: const [],
+      ),
+    );
   }
 }
