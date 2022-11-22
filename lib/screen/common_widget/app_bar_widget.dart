@@ -11,7 +11,7 @@ class AppBarWidget extends AppBar {
   }) : super(
           key: key,
           elevation: 0,
-          backgroundColor: AppColors.white,
+          backgroundColor: AppColors.main,
           automaticallyImplyLeading: false,
           bottom: PreferredSize(
               child: Container(
@@ -26,7 +26,7 @@ class AppBarWidget extends AppBar {
                 children: [
                   Text(
                     title,
-                    style: const TextStyle(color: AppColors.main),
+                    style: const TextStyle(color: AppColors.white),
                   ),
                 ],
               ),
@@ -43,7 +43,7 @@ class AppBarWidget extends AppBar {
                   child: icon ??
                       const Icon(
                         Icons.close,
-                        color: AppColors.main,
+                        color: AppColors.white,
                       ),
                 ),
               )

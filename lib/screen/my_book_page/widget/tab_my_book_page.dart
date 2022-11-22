@@ -7,7 +7,7 @@ class TabMyBookPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> _tabs = <String>['Lent', 'Not Lend'];
+    final List<String> _tabs = <String>['Đã cho mượn', 'Chưa cho mượn'];
     return DefaultTabController(
       length: _tabs.length,
       child: Scaffold(
