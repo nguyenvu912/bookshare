@@ -1,4 +1,5 @@
 import 'package:bookshare/app/constant/app_colors.dart';
+import 'package:bookshare/screen/post-my-book/post_my_book_page.dart';
 import 'package:bookshare/screen/profile_page/common_widget/header_profile_widget.dart';
 import 'package:bookshare/screen/profile_page/common_widget/menu_item_widget.dart';
 import 'package:bookshare/screen/profile_page/profile_detail/profile_detail_page.dart';
@@ -20,7 +21,7 @@ class ProfilePage extends StatelessWidget {
               shrinkWrap: true,
               children: [
                 MenuItemWidget(
-                    title: 'Personal Infomation',
+                    title: 'Thông tin cá nhân',
                     icon: const Icon(
                       Icons.person,
                       color: AppColors.main,
@@ -36,7 +37,7 @@ class ProfilePage extends StatelessWidget {
                   height: 24,
                 ),
                 MenuItemWidget(
-                    title: 'My Book',
+                    title: 'Sách của tôi',
                     icon: const Icon(
                       Icons.menu_book_outlined,
                       color: AppColors.main,
@@ -46,7 +47,23 @@ class ProfilePage extends StatelessWidget {
                   height: 24,
                 ),
                 MenuItemWidget(
-                    title: 'Log Out',
+                    title: 'Đăng sách',
+                    icon: const Icon(
+                      Icons.drive_folder_upload,
+                      color: AppColors.main,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const PostMyBook()),
+                      );
+                    }),
+                const SizedBox(
+                  height: 24,
+                ),
+                MenuItemWidget(
+                    title: 'Đăng xuất',
                     icon: const Icon(
                       Icons.logout,
                       color: AppColors.main,
