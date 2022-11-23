@@ -3,7 +3,11 @@ import 'package:bookshare/app/constant/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class HeaderProfileWidget extends StatelessWidget {
-  const HeaderProfileWidget({Key? key}) : super(key: key);
+  final String fullName;
+  final String imageUrl;
+  const HeaderProfileWidget(
+      {Key? key, required this.fullName, required this.imageUrl})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +21,7 @@ class HeaderProfileWidget extends StatelessWidget {
               width: 64,
               child: Container(
                 child: Image.asset(
-                  AppImages.icLogoApp,
+                  imageUrl,
                 ),
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(32)),
@@ -27,7 +31,7 @@ class HeaderProfileWidget extends StatelessWidget {
               width: 12,
             ),
             Text(
-              'Nguyen Huy Vu',
+              fullName,
               style: AppTextStyle.black(14, weight: FontWeight.bold),
               overflow: TextOverflow.ellipsis,
             )

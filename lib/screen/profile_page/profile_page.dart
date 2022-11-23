@@ -1,4 +1,5 @@
 import 'package:bookshare/app/constant/app_colors.dart';
+import 'package:bookshare/app/constant/app_images.dart';
 import 'package:bookshare/screen/post-my-book/post_my_book_page.dart';
 import 'package:bookshare/screen/profile_page/common_widget/header_profile_widget.dart';
 import 'package:bookshare/screen/profile_page/common_widget/menu_item_widget.dart';
@@ -13,7 +14,10 @@ class ProfilePage extends StatelessWidget {
     return Scaffold(
         body: Column(
       children: [
-        const HeaderProfileWidget(),
+        const HeaderProfileWidget(
+          fullName: "Nguyen Huy Vu",
+          imageUrl: AppImages.icLogoApp,
+        ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
